@@ -1,15 +1,18 @@
 .header= 'Away Team'
 
 .body
-  %p.welcome{style: 'margin-top: 0'}= @t('hello')
-
-  %p
-    %strong The example transitions:
-
-  %ul.listview
+  %form.new-todos{name: 'new-todos'}
+    %input{type: 'text', name: 'new-todo'}
+    %button{type: 'submit'} Add Todo
+    
+  %ul.todos
     %li
-      %a{href: '#/detail', 'data-transition': 'slide'}= 'Slide'
+      %img{src: 'http://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png'}
+      Sample Todo
+      %button.finish
+        Done!
     %li
-      %a{href: '#/detail', 'data-transition': 'slideup'}= 'Slide up'
-    %li
-      %a{href: '#/detail', 'data-transition': 'flip'}= 'Flip'
+      %img{src: 'http://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png'}
+      Sample Todo Two
+      %button.finish
+        Done!
